@@ -14,8 +14,14 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.MenuItem;
 import javafx.scene.text.Text;
 
+/**
+ * Controller class that initially sets up the game with resources.
+ */
 public class Controller {
 
+  /**
+   *First 3 fields are style classes, and first field is a placeholder.
+   */
   public static final String PLACEHOLDER_CLASS = "";
   public static final String WIN_STYLE_CLASS = "win";
   public static final String LOSS_STYLE_CLASS = "loss";
@@ -75,6 +81,9 @@ public class Controller {
     updateRolls(game.getRolls());
   }
 
+  /**
+   *Stops state of game.
+   */
   public void stop() {
     pause(null);
   }
@@ -113,6 +122,9 @@ public class Controller {
     private static final int TALLY_UPDATE_INTERVAL = 2_000;
     private static final int ROLLS_UPDATE_INTERVAL = 10_000;
 
+    /**
+     * Updates the tally and rolls according to the game state while in play.
+     */
     @Override
     public void run() {
       int count = 0;

@@ -11,16 +11,30 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
+/**
+ * This class defines the way the dice rolls appear on the screen,
+ * and imports resources for that display.
+ */
 public class RollCell extends ListCell<Roll> {
 
   private static final String RESOURCE_PATH = "res";
   private static final String ROLL_PATH_RESOURCE = "/roll.fxml";
   private ResourceBundle bundle;
 
+  /**
+   * RollCell method that takes resource bundle as a parameter.
+   * @param bundle
+   */
   public RollCell(ResourceBundle bundle) {
     this.bundle = bundle;
   }
 
+
+  /**
+   * Updates dice rolls and imports it's resources from roll.fxml
+   * @param item
+   * @param empty
+   */
   @Override
   protected void updateItem(Roll item, boolean empty) {
     super.updateItem(item, empty);
