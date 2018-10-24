@@ -32,7 +32,16 @@ class GameTest {
     }
   }
 
-
+  @Test
+  void testPointWin() {
+    for (int point : new int[]{2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}) {
+      for (int roll = 2; roll <= 12; roll++) {
+        if (roll == point) {
+          assertSame(State.WIN, State.POINT.roll(roll, point));
+        }
+      }
+    }
+  }
 
   @Test
   void testPointLoss() {
